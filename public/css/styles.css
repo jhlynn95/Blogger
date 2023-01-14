@@ -1,0 +1,468 @@
+nav {
+    display: flex;
+    align-items: baseline;
+    background-color: black;
+    color: whitesmoke;
+    justify-content: end;
+}
+
+nav p {
+    width: 50%;
+    margin-left: 1em;
+    font-size: 3em;
+}
+
+nav a {
+    width: 16.6%;
+    color: whitesmoke;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#logout {
+    width: 16.6%;
+    color: whitesmoke;
+    font-size: 1.5em;
+    background: black;
+    text-align: center;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px;
+}
+
+/* section homepage post */
+.homepage-post {
+    border-style: solid;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.homepage-post-a {
+    color: black;
+    text-decoration: none;
+}
+
+.homepage-post-title {
+    display: flex;
+    align-items: center;
+    background: lightblue;
+}
+
+.homepage-post-header {
+    flex-grow: 1;
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+.homepage-post-p {
+    align-self: flex-end;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* login */
+.login-section {
+    border: solid;
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+
+#login-title {
+    font-size: 2.5em;
+    background: lightblue;
+    margin: 0px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-label{
+    font-size: 1.5em;
+    width: 33.3%;
+}
+
+.login-div {
+    margin-bottom: 1em;
+    align-items: center;
+    display: flex;
+}
+
+.login-input {
+    font-size: 1em;
+    width: 18em;
+    height: 2em;
+}
+
+.login-btn {
+    background: black;
+    color: white;
+    font-size: 1.5em;
+    width: 6em;
+    font-weight: bold;
+    height: 2em;
+}
+
+#password-login {
+    width: 18.205em;
+}
+
+.login-a {
+    font-size: 1.25em;
+    margin-left: 1em;
+}
+
+/* homepage single post */
+.single-post-home-section {
+    border: solid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.single-post-home-title {
+    display: flex;
+    align-items: center;
+    background: lightblue;
+}
+
+.single-post-home-header {
+    flex-grow: 1;
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+.single-post-home-p {
+    align-self: flex-end;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.single-post-home-a {
+    color: black;
+    text-decoration: none;
+}
+
+.single-comment-home-header {
+    background: silver;
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.single-comment-home-p {
+    font-size: 1.05em;
+    padding-left: 1em;
+}
+
+.single-post-home-h2 {
+    text-align: center;
+}
+
+.add-comment-form {
+    text-align: center;
+}
+
+.single-comment-home-div {
+    padding-bottom: 1em;
+}
+
+.single-comment-home-label {
+    font-size: 1.25em;
+    padding-right: 1em;
+}
+
+#single-comment-text-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#comment_text-add-comment {
+    width: 22.575em;
+    height: 5.7em;
+}
+
+.single-comment-home-btn {
+    background: black;
+    color: white;
+    font-size: 1.25em;
+    width: 5em;
+    font-weight: bold;
+    height: 2em;
+}
+
+/* edit comment */
+.comment-edit-section {
+    border: solid;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.comment-edit-h2 {
+    background: lightblue;
+    margin: 0px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+.edit-comment-form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.comment-update-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-update-label {
+    font-size: 1.25em;
+    margin-right: 1em;
+}
+
+#edit-comment_text {
+    height: 5.7em;
+    width: 22.575em;
+}
+
+.comment-update-btn-section {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.comment-btn {
+    background: black;
+    color: white;
+    font-size: 1.25em;
+    width: 10em;
+    font-weight: bold;
+    height: 2.5em;
+}
+
+.delete-comment-form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* user blog posts */
+.user-blog-post-section {
+    border: solid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.user-blog-post-a {
+    color: black;
+    text-decoration: none;
+}
+
+.user-blog-post-div-title {
+    display: flex;
+    align-items: center;
+    background: lightblue;
+}
+
+.user-blog-post-header {
+    flex-grow: 1;
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+.user-blog-post-p {
+    align-self: flex-end;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.dashboard-section{
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-a {
+    color: white;
+    height: 26em;
+    padding-left: 1.24023432731628em;
+    padding-right: 1.24023432731628em;
+    padding-bottom: 0.6em;
+    padding-top: 0.6em;
+    text-decoration: none;
+}
+
+.dashboard-btn {
+    background: black;
+    color: white;
+    font-size: 1.25em;
+    width: 10em;
+    font-weight: bold;
+    height: 2.5em;
+}
+
+/* dashboard single post edits */
+.single-post-dashboard-section {
+    border: solid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.single-post-dashboard-h2 {
+    background: lightblue;
+    margin: 0px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+.update-form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.single-post-dashboard-label {
+    font-size: 1.25em;
+    width: 10%;
+}
+
+.single-post-dashboard-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+#title-update {
+    width: 31.125em;
+    height: 2.5em;
+}
+
+#content-update {
+    width: 417px;
+    height: 166px;
+}
+
+.single-post-dashboard-btn {
+    background: black;
+    color: white;
+    font-size: 1.25em;
+    width: 7.5em;
+    font-weight: bold;
+    height: 2.5em;
+}
+
+.delete-form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.add-post-section {
+    border: solid;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.add-post-h2 {
+    background: lightblue;
+    margin: 0px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+.add-post-form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.add-post-input-div {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-post-label {
+    font-size: 1.25em;
+    width: 10%;
+}
+
+#add-post-content {
+    height: 13.575em;
+    width: 34.95em;
+}
+
+#add-post-title {
+    width: 34.8em;
+    height: 2.5em;
+}
+
+.add-post-btn {
+    background: black;
+    color: white;
+    font-size: 1.25em;
+    width: 5.5em;
+    font-weight: bold;
+    height: 2.5em;
+}
+
+/* sign up */
+.sign-up-section {
+    border: solid;
+    margin-top: 1em;
+}
+
+.sign-up-h2 {
+    background: lightblue;
+    margin: 0px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+.signup-form {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.sign-up-input-div {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-label {
+    width: 10%;
+    margin-right: 1em;
+    font-size: 1.25em;
+}
+
+.sign-up-input {
+    width: 35em;
+    height: 1.5em;
+}
+
+.sign-up-btn {
+    background: black;
+    color: white;
+    font-size: 1.25em;
+    width: 6em;
+    font-weight: bold;
+    height: 2.25em;
+}

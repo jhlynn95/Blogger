@@ -1,0 +1,28 @@
+<section class="single-post-dashboard-section">
+    <h2 class="single-post-dashboard-h2">Edit Post</h2>
+    <form class="update-form">
+        <input type="hidden" id="idvalue" value="{{blogs.id}}"/>
+        <div class="single-post-dashboard-div">
+            <label class="single-post-dashboard-label" for="title-update">Title:</label>
+            <input type="text" id="title-update" value="{{blogs.title}}"/>
+        </div>
+        <div class="single-post-dashboard-div">
+            <label class="single-post-dashboard-label" for="content-update">Content:</label>
+            <textarea type="text" id="content-update">{{blogs.content}}</textarea>
+        </div>
+        <div>
+            <button class="single-post-dashboard-btn" type="submit">Update Post</button>
+        </div>
+    </form>
+</section>
+
+<section class="single-post-dashboard-section">
+    <h2 class="single-post-dashboard-h2">Delete Post</h2>
+    <form class="delete-form">
+        <input type="hidden" id="idValue" value="{{blogs.id}}"/>
+        <button class="single-post-dashboard-btn" type="submit">Delete Post</button>
+    </form>
+</section>
+
+<script src="../../js/updatePost.js"></script>
+<script src="../../js/deletePost.js"></script>
