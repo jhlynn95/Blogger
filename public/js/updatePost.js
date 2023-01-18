@@ -3,10 +3,10 @@ const updatePostFormHandler = async (event) => {
 
     const title = document.querySelector('#title-update').value;
     const content = document.querySelector('#content-update').value;
-    const blogId = document.querySelector('#idvalue').value;
+    const postId = document.querySelector('#idvalue').value;
 
     if(title && content) {
-        const response = await fetch(`/api/users/updatePost/${blogId}`, {
+        const response = await fetch(`/api/users/updatePost/${postId}`, {
             method: 'PUT',
             body: JSON.stringify({ title, content }),
             headers: { 'Content-Type': 'application/json '},

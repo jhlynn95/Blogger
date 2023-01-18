@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { User, Blog, Comment } = require('../models');
+const { User, Post, Comment } = require('../models');
 
 const withAuth = require('../utils/auth');
 
 // GET homepage
 router.get('/', async (req, res) => {
     try {
-        const dbBlogData = await Blog.findAll({
+        const dbPostData = await Post.findAll({
             include: [
                 {
                     model: Comment,
@@ -23,12 +23,12 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        const blogs = dbBlogData.map((blog) =>
-            blog.get({ plain: true })
+        const Posts = dbPostData.map((Posts) =>
+            Posts.get({ plain: true })
         );
 
-        res.render('homepage', {
-            blogs,
+        res.render('home', {
+            Posts,
             loggedIn: req.session.loggedIn,
         });
     } catch (err) {
@@ -37,13 +37,13 @@ router.get('/', async (req, res) => {
     }
 });
 
-// GET homepage click blog
-router.get('/homepage/blog/:id', withAuth, async (req, res) => {
-    const dbBlogData = await Blog.findByPk(req.params.id, {
+// GET homepage click Posts
+router.get('/homepage/post/:id', withAuth, async (req, res) => {
+    const dbPostData = await Post.findByPk(req.params.id, {
         include: [
             {
                 model: Comment,
-                attributes: ['comment_text', 'createdAt', 'user_id', 'blog_id', 'id'],
+                attributes: ['comment_text', 'createdAt', 'user_id', 'post_id', 'id'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -55,16 +55,16 @@ router.get('/homepage/blog/:id', withAuth, async (req, res) => {
             }
         ]
     });
-    const blog = dbBlogData.get({ plain: true });
+    const Posts = dbPostData.get({ plain: true });
 
     res.render('single-post-home', {
-        blog,
+        Posts,
         loggedIn: req.session.loggedIn,
     })
 });
 
 // GET user comment
-router.get('/hompage/blog/comment/:id', withAuth, async (req, res) => {
+router.get('/hompage/post/comment/:id', withAuth, async (req, res) => {
     const dbCommentData = await Comment.findByPk(req.params.id, {
         include: [
             {
@@ -74,16 +74,16 @@ router.get('/hompage/blog/comment/:id', withAuth, async (req, res) => {
         ]
     });
     const comment = dbCommentData.get({ plain: true });
-    let blogId = comment.blog_id;
+    let postId = comment.posts_id;
     if(comment.user_id !== req.session.userId) {
-        res.redirect(`/homepage/blog/${blogId}`);
+        res.redirect(`/homepage/post/${postId}`);
         console.log('Only the user who created the comment can edit this comment.')
         return;
     }
     res.render('comment-edit', { comment, loggedIn: req.session.loggedIn })
 })
 
-// GET user blogs dashboard
+// GET user Postss dashboard
 router.get('/dashboard', async (req, res) => {
     try {
         if(!req.session.loggedIn) {
@@ -91,18 +91,18 @@ router.get('/dashboard', async (req, res) => {
             res.redirect('/login')
             return;
         }
-
-        const dbBlogData = await Blog.findAll({
+        console.log(req.session.userId)
+        const dbPostData = await Post.findAll({
             where: {
                 user_id: req.session.userId,
             }
         });
 
-        const blogs = dbBlogData.map((blog) => 
-            blog.get({ plain: true })
+        const Posts = dbPostData.map((Posts) => 
+            Posts.get({ plain: true })
         );
 
-        res.render('dashboard', { blogs, loggedIn: req.session.loggedIn });
+        res.render('dashboard', { blogs: Posts, loggedIn: req.session.loggedIn });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -110,13 +110,13 @@ router.get('/dashboard', async (req, res) => {
 });
 
 // GET single post from dashboard
-router.get('/dashboard/blog/:id', withAuth, async (req, res) => {
+router.get('/dashboard/post/:id', withAuth, async (req, res) => {
 
-    const dbBlogData = await Blog.findByPk(req.params.id);
+    const dbPostData = await Posts.findByPk(req.params.id);
 
-    const blogs = dbBlogData.get({ plain: true })
+    const Posts = dbPostData.get({ plain: true })
     
-    res.render('single-post-dashboard', { blogs, loggedIn: req.session.loggedIn });
+    res.render('single-post-dashboard', { Posts, loggedIn: req.session.loggedIn });
 })
 
 // GET add post

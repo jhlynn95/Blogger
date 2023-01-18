@@ -1,15 +1,15 @@
 <section class="single-post-home-section">
         <div class="single-post-home-title">
-            <header class="single-post-home-header">{{blog.title}}</header>
-            <p class="single-post-home-p">Created by: {{blog.user.username}} on {{blog.createdAt}}</p>
+            <header class="single-post-home-header">{{posts.title}}</header>
+            <p class="single-post-home-p">Created by: {{posts.user.username}} on {{posts.createdAt}}</p>
         </div>
         <div>
-            <p class="single-post-home-p">{{blog.content}}</p>
+            <p class="single-post-home-p">{{posts.content}}</p>
         </div>
 </section>
 
 
-{{#each blog.comments as |comment|}}
+{{#each posts.comments as |comment|}}
 <section class="single-post-home-section">
     <a class="single-post-home-a" href="/hompage/blog/comment/{{comment.id}}">
         <header class="single-comment-home-header">Commented by: {{comment.user.username}} at {{comment.createdAt}}</header>
@@ -24,7 +24,7 @@
         <div class="single-comment-home-div" id="single-comment-text-section">
             <label class="single-comment-home-label" for="comment_text-add-comment">Text:</label>
             <textarea type="text" id="comment_text-add-comment"></textarea>
-            <input type="hidden" id="blog_id" value="{{blog.id}}"/>
+            <input type="hidden" id="blog_id" value="{{posts.id}}"/>
         </div>
         <div class="single-comment-home-div">
             <button class="single-comment-home-btn" type="submit">submit</button>

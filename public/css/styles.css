@@ -1,7 +1,7 @@
 nav {
     display: flex;
     align-items: baseline;
-    background-color: black;
+    background-color: rgb(177, 96, 168);
     color: whitesmoke;
     justify-content: end;
 }
@@ -23,7 +23,7 @@ nav a {
     width: 16.6%;
     color: whitesmoke;
     font-size: 1.5em;
-    background: black;
+    background: rgb(177, 96, 168);
     text-align: center;
     border: none;
     text-decoration: underline;
@@ -47,7 +47,7 @@ nav a {
 .homepage-post-title {
     display: flex;
     align-items: center;
-    background: lightblue;
+    background: rgb(1, 88, 117);
 }
 
 .homepage-post-header {
@@ -72,7 +72,7 @@ nav a {
 
 #login-title {
     font-size: 2.5em;
-    background: lightblue;
+    background: rgb(59, 123, 144);
     margin: 0px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -104,7 +104,7 @@ nav a {
 }
 
 .login-btn {
-    background: black;
+    background: rgb(175, 104, 181);
     color: white;
     font-size: 1.5em;
     width: 6em;
@@ -130,7 +130,7 @@ nav a {
 .single-post-home-title {
     display: flex;
     align-items: center;
-    background: lightblue;
+    background: rgb(3, 100, 133);
 }
 
 .single-post-home-header {
@@ -193,7 +193,7 @@ nav a {
 }
 
 .single-comment-home-btn {
-    background: black;
+    background: rgb(145, 90, 159);
     color: white;
     font-size: 1.25em;
     width: 5em;

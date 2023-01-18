@@ -2,7 +2,7 @@ const deleteCommentFormHandler = async (event) => {
     event.preventDefault();
 
     const commentId = document.querySelector('#idValue').value;
-    const blogId = document.querySelector('#blog_Id').value;
+    const postId = document.querySelector('#post_Id').value;
 
 
     const response = await fetch(`/api/users/deleteComment/${commentId}`, {
@@ -13,7 +13,7 @@ const deleteCommentFormHandler = async (event) => {
     });
 
     if(response.ok) {
-        document.location.replace(`/homepage/blog/${blogId}`)
+        document.location.replace(`/homepage/post/${postId}`)
     } else {
         alert('Failed to delete comment');
     }
