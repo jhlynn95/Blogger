@@ -25,6 +25,7 @@ router.post('/signup', async (req, res) => {
 
 // POST Login
 router.post('/login', async (req, res) => {
+    const userId = req?.session.userId
     try {
         const dbUserData = await User.findOne({
             where: {
@@ -125,23 +126,24 @@ router.delete('/deletePost/:id', async (req, res) => {
     try {
         const comments = await Comment.destroy({
             where: {
-                Post_id: req.params.id,
+                post_id: req.params.id,
             }
         });
-        const Post = await Post.destroy({
+        const post = await Post.destroy({
             where: {
                 id: req.params.id,
             }
         });
 
         if(!Post) {
-            res.status(404).json({ message: "No Post found with that id!" });
+            res.status(400).json({ message: "No Post found with that id!" });
             return;
         }
         console.log(comments)
-        res.status(200).json(Post)
+        res.status(200).json(post)
         
     } catch (err) {
+        console.log(err)
         res.status(500).json(err);
     }
 })

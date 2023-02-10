@@ -23,12 +23,12 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        const Posts = dbPostData.map((Posts) =>
+        const posts = dbPostData.map((Posts) =>
             Posts.get({ plain: true })
         );
 
         res.render('home', {
-            Posts,
+            posts,
             loggedIn: req.session.loggedIn,
         });
     } catch (err) {
@@ -112,11 +112,11 @@ router.get('/dashboard', async (req, res) => {
 // GET single post from dashboard
 router.get('/dashboard/post/:id', withAuth, async (req, res) => {
 
-    const dbPostData = await Posts.findByPk(req.params.id);
+    const dbPostData = await Post.findByPk(req.params.id);
 
-    const Posts = dbPostData.get({ plain: true })
+    const posts = dbPostData.get({ plain: true })
     
-    res.render('single-post-dashboard', { Posts, loggedIn: req.session.loggedIn });
+    res.render('single-post-dashboard', { posts, loggedIn: req.session.loggedIn });
 })
 
 // GET add post
