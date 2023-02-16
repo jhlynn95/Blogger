@@ -3,6 +3,7 @@ nav {
     align-items: baseline;
     background-color: rgb(177, 96, 168);
     color: whitesmoke;
+    font-family: cursive;
     justify-content: end;
 }
 
@@ -209,7 +210,7 @@ nav a {
 }
 
 .comment-edit-h2 {
-    background: lightblue;
+    background: lightpink;
     margin: 0px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -272,7 +273,7 @@ nav a {
 .user-blog-post-div-title {
     display: flex;
     align-items: center;
-    background: lightblue;
+    background: lightpink;
 }
 
 .user-blog-post-header {
@@ -320,7 +321,7 @@ nav a {
 }
 
 .single-post-dashboard-h2 {
-    background: lightblue;
+    background: lightpink;
     margin: 0px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -377,7 +378,7 @@ nav a {
 }
 
 .add-post-h2 {
-    background: lightblue;
+    background: lightpink;
     margin: 0px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -427,7 +428,7 @@ nav a {
 }
 
 .sign-up-h2 {
-    background: lightblue;
+    background: lightpink;
     margin: 0px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
